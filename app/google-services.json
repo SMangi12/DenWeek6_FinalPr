@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "12422242135",
+    "project_id": "den-week5",
+    "storage_bucket": "den-week5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12422242135:android:77c5aced4abc7a94872812",
+        "android_client_info": {
+          "package_name": "com.example.deninternship_week5"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNEcOjzNHaAmwk8xwg3CsJvZO_eR0DFR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
