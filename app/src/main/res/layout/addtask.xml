@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3E5F5"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:text="Add New Task"
+        android:id="@+id/titleAddNew"
+        android:textSize="22sp"
+        android:textColor="#6A1B9A"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"/>
+
+    <EditText
+        android:id="@+id/taskNameEditText"
+        android:hint="Task Name"
+        android:padding="12dp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/taskDesc"
+        android:hint="Task Description"
+        android:padding="12dp"
+        android:textColor="#000"
+        android:layout_marginTop="16dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/taskCategory"
+        android:hint="Task Category (School,Work,Personal)"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/dueDateEditText"
+        android:hint="Due Date (yyyy-mm-dd)"
+        android:focusable="false"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/priorityCheckBox"
+        android:text="High Priority"
+        android:textColor="#4A148C"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:text="Save Task"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:layout_marginTop="24dp"
+        android:padding="12dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

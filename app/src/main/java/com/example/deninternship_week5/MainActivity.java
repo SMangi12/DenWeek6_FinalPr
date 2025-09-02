@@ -7,17 +7,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.deninternship_week5.Entity.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
-
-import java.util.HashMap;
-
 public class MainActivity extends AppCompatActivity {
-
     private EditText etName, etEmail, etPassword;
     private Button btnRegister;
     private TextView tvLogin;
@@ -60,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         String uid = mAuth.getCurrentUser().getUid();
-                        User user = new User(uid, name, email);
+                        String avatarUrl = "https://ui-avatars.com/api/?name="
+                                + name.replace(" ", "+")
+                                + "&background=random";
+                        User user = new User(uid, name, email,avatarUrl);
                         userRef.child(uid).setValue(user)  // 👈 save in DB
                                 .addOnSuccessListener(aVoid -> {
 
@@ -74,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                                     });
 
                                     Toast.makeText(MainActivity.this, "Registered!", Toast.LENGTH_SHORT).show();
-                                    startActivity(new Intent(MainActivity.this, ChatListActivity.class));
+                                    startActivity(new Intent(MainActivity.this, DashBoardActivity.class));
                                     finish();
                                 });
                     } else {
@@ -83,29 +81,3 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,6 +6,7 @@
 
 
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,14 +16,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DenInternship_week5">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2142278903081302~1640257750"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"
+            android:exported="true">
         </activity>
         <activity android:name=".ChatListActivity"
             android:exported="true">
@@ -34,6 +42,62 @@
         </activity>
         <activity android:name=".ChatDetailActivity"
             android:windowSoftInputMode="adjustResize|stateHidden"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".Quiz.MainFunctionality.QuizWelcome"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".OnboardingFeaturesActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".OnboardingPrivacyActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".Quiz.MainFunctionality.QuizActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".Quiz.jetUi.ComposeLauncher"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".Quiz.jetUi.FinalScoreActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".DashBoardActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".TaskManager.TaskActivityFiles.TaskListActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".TaskManager.TaskActivityFiles.TaskMainActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".TaskManager.TaskActivityFiles.AddTaskActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".TaskManager.TaskActivityFiles.TaskDetailActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".CreateGroupActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".GroupChatActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".ProfileActivity"
             android:exported="true">
 
         </activity>

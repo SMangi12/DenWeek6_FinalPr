@@ -1,0 +1,87 @@
+
+// Question data model
+data class Question(
+    val questionText: String,
+    val options: List<String>,
+    val correctAnswerIndex: Int
+)
+
+object QuestionData {
+
+    val computerNetworksQuestions = listOf(
+        Question("What is the purpose of the OSI model?",
+            listOf("To encrypt data", "To describe network protocols", "To speed up internet", "To manage hardware"), 1),
+        Question("How many layers are in the OSI model?",
+            listOf("5", "6", "7", "8"), 2),
+        Question("Which layer in the OSI model is responsible for routing?",
+            listOf("Transport", "Network", "Data Link", "Application"), 1),
+        Question("TCP stands for?",
+            listOf("Transfer Control Protocol", "Transmission Control Protocol", "Time Control Protocol", "Traffic Control Protocol"), 1),
+        Question("What does IP stand for?",
+            listOf("Internet Protocol", "Internal Process", "International Packet", "Input Protocol"), 0),
+        Question("Which protocol uses a three-way handshake?",
+            listOf("UDP", "FTP", "TCP", "HTTP"), 2),
+        Question("Which layer handles MAC addressing?",
+            listOf("Application", "Data Link", "Network", "Transport"), 1),
+        Question("What is the maximum length of an IPv4 address in bits?",
+            listOf("32", "64", "128", "16"), 0),
+        Question("Which layer encrypts data?",
+            listOf("Presentation", "Session", "Network", "Transport"), 0),
+        Question("Which of these is a transport layer protocol?",
+            listOf("HTTP", "TCP", "IP", "FTP"), 1),
+        Question("What is the function of ARP?",
+            listOf("Route packets", "Translate IP to MAC", "Encrypt data", "Send mail"), 1),
+        Question("Which device operates at Layer 3?",
+            listOf("Hub", "Switch", "Router", "Bridge"), 2),
+        Question("Which layer ensures reliable transmission?",
+            listOf("Data Link", "Transport", "Application", "Session"), 1),
+        Question("What is the default port for HTTP?",
+            listOf("21", "22", "80", "443"), 2),
+        Question("What is the purpose of a firewall?",
+            listOf("Enhance speed", "Connect networks", "Provide security", "Store data"), 2),
+        Question("Which protocol sends emails?",
+            listOf("SMTP", "FTP", "SNMP", "HTTP"), 0),
+        Question("Which protocol retrieves emails?",
+            listOf("POP3", "SMTP", "HTTP", "DNS"), 0),
+        Question("What is DNS used for?",
+            listOf("Download data", "Map domain names to IPs", "Send messages", "Secure traffic"), 1),
+        Question("Which layer creates sessions?",
+            listOf("Application", "Transport", "Session", "Network"), 2),
+        Question("Which protocol does not guarantee delivery?",
+            listOf("TCP", "UDP", "FTP", "SMTP"), 1),
+        // 30 more CN questions below
+        Question("What is the full form of FTP?", listOf("File Transfer Protocol", "File Transit Process", "Fast Transfer Protocol", "Free Transfer Port"), 0),
+        Question("Which port is used by DNS?", listOf("53", "80", "25", "110"), 0),
+        Question("What is an IP address?", listOf("A physical address", "A device name", "A unique identifier for a device on a network", "A type of protocol"), 2),
+        Question("Which protocol is used for secure web browsing?", listOf("HTTP", "HTTPS", "FTP", "TCP"), 1),
+        Question("Which layer is responsible for end-to-end delivery?", listOf("Transport", "Network", "Session", "Data Link"), 0),
+        Question("Which device broadcasts packets to all devices?", listOf("Router", "Switch", "Bridge", "Hub"), 3),
+        Question("Which protocol helps in assigning IP addresses?", listOf("DHCP", "DNS", "FTP", "HTTP"), 0),
+        Question("What is a MAC address?", listOf("Network address", "Software ID", "Hardware address", "Routing protocol"), 2),
+        Question("Which address is used to identify a device globally?", listOf("IP address", "MAC address", "Subnet", "Host ID"), 0),
+        Question("What is subnetting?", listOf("Dividing IP network", "Joining networks", "Blocking traffic", "Encrypting data"), 0),
+        Question("How many bits are in an IPv6 address?", listOf("64", "128", "32", "256"), 1),
+        Question("Which layer breaks data into segments?", listOf("Transport", "Network", "Data Link", "Application"), 0),
+        Question("Which one is connectionless?", listOf("TCP", "HTTP", "UDP", "FTP"), 2),
+        Question("Which protocol is used in Ping command?", listOf("ICMP", "TCP", "UDP", "HTTP"), 0),
+        Question("Which device separates two networks?", listOf("Router", "Switch", "Hub", "Bridge"), 0),
+        Question("Which is not a network topology?", listOf("Star", "Ring", "Bus", "Point"), 3),
+        Question("Which protocol is used to access web pages?", listOf("HTTP", "SMTP", "FTP", "ARP"), 0),
+        Question("What is the maximum length of a MAC address?", listOf("48 bits", "32 bits", "16 bits", "64 bits"), 0),
+        Question("Which device uses IP address to forward data?", listOf("Router", "Hub", "Switch", "Modem"), 0),
+        Question("Which protocol is used to transfer files?", listOf("FTP", "HTTP", "SMTP", "SNMP"), 0),
+        Question("What is the primary purpose of NAT?", listOf("Network security", "IP address translation", "Speed enhancement", "Data encryption"), 1),
+        Question("Which port is used by HTTPS?", listOf("443", "80", "21", "23"), 0),
+        Question("Which OSI layer is closest to the user?", listOf("Application", "Session", "Transport", "Data Link"), 0),
+        Question("Which protocol is used for remote login?", listOf("Telnet", "HTTP", "FTP", "SMTP"), 0),
+        Question("What is a packet?", listOf("A file", "A network address", "A unit of data", "A protocol"), 2),
+        Question("What layer is HTTP in?", listOf("Application", "Transport", "Network", "Session"), 0),
+        Question("What is a port number?", listOf("A network address", "An identifier for services", "A MAC address", "A subnet"), 1),
+        Question("What is latency?", listOf("Data size", "Network delay", "Speed", "IP translation"), 1),
+        Question("Which protocol is faster but less reliable?", listOf("TCP", "UDP", "HTTP", "SMTP"), 1),
+        Question("Which of these uses TCP?", listOf("VoIP", "Streaming", "Web browsing", "Live gaming"), 2)
+    )
+
+    // TODO: Add androidDevelopmentQuestions and dsaQuestions below in same pattern
+
+}

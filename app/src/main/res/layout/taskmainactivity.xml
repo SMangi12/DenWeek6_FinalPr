@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9C4"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+<ImageView
+android:id="@+id/logoImage"
+android:src="@drawable/logo"
+android:layout_width="150dp"
+android:layout_height="150dp"
+android:contentDescription="Logo"
+  />
+
+<TextView
+android:text="Welcome to My Task Manager"
+android:textSize="26sp"
+android:textColor="#4A148C"
+    android:layout_marginTop="24dp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+<TextView
+android:text="Let’s manage your tasks efficiently!"
+android:textSize="16sp"
+android:textColor="#6A1B9A"
+    android:gravity="center"
+    android:layout_marginTop="12dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+
+
+<Button
+android:id="@+id/continueButton"
+android:text="Continue"
+android:textAllCaps="false"
+android:layout_marginTop="20dp"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textColor="#FFFFFF"
+android:paddingLeft="24dp"
+android:paddingRight="24dp"
+android:paddingTop="10dp"
+android:paddingBottom="10dp" />
+    </LinearLayout>

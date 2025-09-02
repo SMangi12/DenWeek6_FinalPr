@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 public class ChatDetailActivity extends AppCompatActivity {
-
     private static final String TAG = "ChatDetailActivity";
 
     TextView tvReceiverName;
@@ -109,6 +108,26 @@ public class ChatDetailActivity extends AppCompatActivity {
                 });
     }
 
+    //change 1
+private void sendGroupMessage(String groupId, String senderId, String senderName, String messageText) {
+    DatabaseReference groupChatRef = FirebaseDatabase.getInstance()
+            .getReference("groups")
+            .child(groupId)
+            .child("messages");
+
+    String messageId = groupChatRef.push().getKey();
+    Message message = new Message(senderId, senderName, messageText, System.currentTimeMillis());
+
+    groupChatRef.child(messageId).setValue(message)
+            .addOnSuccessListener(aVoid ->
+                    Toast.makeText(this, "Message sent!", Toast.LENGTH_SHORT).show()
+            )
+            .addOnFailureListener(e ->
+                    Toast.makeText(this, "Failed to send: " + e.getMessage(), Toast.LENGTH_SHORT).show()
+            );
+}
+
+
     private void readMessages(final String myId, final String userId) {
         chatRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -143,6 +162,37 @@ public class ChatDetailActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) { }
         });
     }
+
+
+
+
+    private void readGroupMessages(String groupId) {
+        DatabaseReference groupChatRef = FirebaseDatabase.getInstance()
+                .getReference("groups")
+                .child(groupId)
+                .child("messages");
+
+        groupChatRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                messageList.clear();
+                for (DataSnapshot ds : snapshot.getChildren()) {
+                    Message msg = ds.getValue(Message.class);
+                    if (msg != null) {
+                        messageList.add(msg);
+                    }
+                }
+                messageAdapter.notifyDataSetChanged();
+                recyclerMessages.scrollToPosition(messageList.size() - 1);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("GroupChat", "Error loading messages: " + error.getMessage());
+            }
+        });
+    }
+
 
     private void showLocalNotification(String title, String message) {
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);

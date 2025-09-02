@@ -1,5 +1,4 @@
 package com.example.deninternship_week5;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -7,22 +6,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
-
 public class LoginActivity extends AppCompatActivity {
-
     private EditText etEmail, etPassword;
     private DatabaseReference userRef;
-
     private Button btnLogin;
     private TextView tvRegister;
-
     private FirebaseAuth mAuth;
 
     @Override
@@ -73,19 +66,8 @@ public class LoginActivity extends AppCompatActivity {
                                 }
                             }
                         });
-
-
-
-
-
-
-
-
-
-
-
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(LoginActivity.this, ChatListActivity.class));
+                        startActivity(new Intent(LoginActivity.this, DashBoardActivity.class));
                         finish();
                     } else {
                         Toast.makeText(LoginActivity.this, "Error: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

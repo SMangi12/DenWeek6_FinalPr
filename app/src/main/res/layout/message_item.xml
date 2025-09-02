@@ -55,6 +55,18 @@
             android:text="Receiver msg"
             android:maxWidth="250dp"/>
 
+
+        <TextView
+            android:id="@+id/tvReceiverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:text="Receiver msg"
+            android:maxWidth="250dp"/>
+
+
+
         <TextView
             android:id="@+id/tvReceiverTime"
             android:layout_width="wrap_content"
@@ -65,5 +77,30 @@
             android:layout_marginTop="2dp"
             android:gravity="start"/>
     </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/senderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
 
 </LinearLayout>
